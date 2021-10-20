@@ -1,6 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-var myMo = require('myModule');
+var myMo = require('myModule/index.js');
 
 try {
   // `who-to-greet` input defined in action metadata file
