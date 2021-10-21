@@ -37,5 +37,8 @@ jobs:
       - uses: yikai116/javascript-action@master
         with:
           who-to-greet: 'java action'
+      - name: "set env"
+        run: echo "envVar=1234 >> $GITHUB_ENV
       - name: "Hello world when it's Monday"
         run: echo "Hello $envVar!"
+      
