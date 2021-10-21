@@ -34,11 +34,11 @@ jobs:
 #         run: |
 #           echo Add other actions to build,
 #           echo test, and deploy your project.
-      - uses: yikai116/javascript-action@master
-        with:
-          who-to-greet: 'java action'
       - name: "set env"
         run: echo "envVar=1234" >> $GITHUB_ENV
+      - uses: yikai116/javascript-action@master
+        with:
+          who-to-greet: $envVar
       - name: "Hello world when it's Monday"
         run: echo "Hello $envVar!"
       
