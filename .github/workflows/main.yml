@@ -38,7 +38,7 @@ jobs:
         with:
           who-to-greet: 'java action'
       - name: "set env"
-        run: echo "envVar=1234 >> $GITHUB_ENV
+        run: echo "envVar=1234" >> $GITHUB_ENV
       - name: "Hello world when it's Monday"
         run: echo "Hello $envVar!"
       
