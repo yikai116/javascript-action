@@ -37,3 +37,5 @@ jobs:
       - uses: yikai116/javascript-action@master
         with:
           who-to-greet: 'java action'
+      - name: "Hello world when it's Monday"
+        run: echo "Hello $envVar!"
