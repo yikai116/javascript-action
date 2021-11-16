@@ -42,7 +42,7 @@ jobs:
         run: echo "envVar=1234" >> $GITHUB_ENV
       - uses: yikai116/javascript-action@master
         with:
-          who-to-greet: env.envVar
+          who-to-greet: ${{ env.envVar }}
       - name: "Hello world when it's Monday"
         run: |
           echo "Hello $envVar!"
