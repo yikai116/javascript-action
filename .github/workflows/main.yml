@@ -46,7 +46,7 @@ jobs:
           who-to-greet: ${{ env.envVar }}
       - uses: yikai116/javascript-action@master
         with:
-          who-to-greet: ${{ step.atomStep1.outputs.res }}
+          who-to-greet: ${{ steps.atomStep1.outputs.res }}
       - name: "Hello world when it's Monday"
         run: |
           echo "Hello $envVar!"
