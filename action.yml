@@ -6,7 +6,7 @@ inputs:
     required: true
     default: 'World'
 outputs:
-  time: # id of output
+  res: # id of output
     description: 'The time we we greeted you'
 runs:
   using: 'node12'
