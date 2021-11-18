@@ -40,9 +40,13 @@ jobs:
 #           echo test, and deploy your project.
       - name: "set env"
         run: echo "envVar=1234" >> $GITHUB_ENV
-      - uses: yikai116/javascript-action@master
+      - id: "atomStep1"
+        uses: yikai116/javascript-action@master
         with:
           who-to-greet: ${{ env.envVar }}
+      - uses: yikai116/javascript-action@master
+        with:
+          who-to-greet: ${{ step.atomStep1.outputs.res }}
       - name: "Hello world when it's Monday"
         run: |
           echo "Hello $envVar!"
